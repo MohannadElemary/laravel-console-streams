@@ -1,0 +1,33 @@
+{
+    "name": "mohannadelemary/laravel-console-streams",
+    "description": "Opt-in Artisan trait that keeps machine data on STDOUT and sends console components, line(), info() and other diagnostics to STDERR, so `artisan foo --json | jq` just works.",
+    "keywords": ["laravel", "artisan", "console", "stderr", "stdout", "json", "pipe", "cli"],
+    "license": "MIT",
+    "homepage": "https://github.com/MohannadElemary/laravel-console-streams",
+    "authors": [{"name": "Mohannad Elemary", "homepage": "https://github.com/MohannadElemary"}],
+    "require": {
+        "php": "^8.3",
+        "illuminate/console": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "symfony/console": "^7.2|^8.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "symfony/process": "^7.2|^8.0"
+    },
+    "autoload": {"psr-4": {"MohannadElemary\\ConsoleStreams\\": "src/"}},
+    "autoload-dev": {"psr-4": {
+        "MohannadElemary\\ConsoleStreams\\Tests\\": "tests/",
+        "Workbench\\App\\": "workbench/app/"
+    }},
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "format": "vendor/bin/pint",
+        "lint": "vendor/bin/pint --test"
+    },
+    "config": {"sort-packages": true, "allow-plugins": {"pestphp/pest-plugin": true}},
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
